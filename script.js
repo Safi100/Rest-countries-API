@@ -1,5 +1,5 @@
 const select_country = document.querySelector("#countries")
-let countries;
+let countries
 
 select_country.addEventListener('change', e =>{
     displayCountryInfo(e.target.value)
@@ -47,3 +47,8 @@ function displayCountryInfo(CountyByalpha3code){
         document.getElementById("borders").innerHTML = "EGY, JOR, LBN, SYR"
     }
 }
+
+var loader = document.querySelector(".loader")
+document.querySelector("#flag-container img").addEventListener('load',()=>{
+    loader.style.display="none"
+})
